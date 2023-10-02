@@ -52,7 +52,7 @@ async function getContactById(contactId) {
       return null;
     }
     contacts[index] = {contactId, ...updatedData};
-    await writeFile(contactsPath, contacts);
+    await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
     return contacts[index];
   }
   
