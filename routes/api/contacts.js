@@ -4,10 +4,9 @@ const ctrl = require('../api/../../controllers/books');
 
 const router = express.Router();
 
-const { validateBody } = require('../../middlewares/validateBody');
+const validateBody =  require('../../middlewares/validateBody')
 
 const schemas = require('../../schemas/contacts');
-
 
 router.get('/', ctrl.getAllContacts);
 
